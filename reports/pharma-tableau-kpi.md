@@ -1,39 +1,44 @@
-# 📈 Tableau Dashboard: KPI Monitoring for Cancer Clinical Trials
+# 📈 Tableau KPI Dashboard – Cancer Diagnostics & Drug Trials
 
-**Client**: NeoGenomics & Partner Pharma Companies  
-**Tool**: Tableau Public + SQL Server backend
-
----
-
-## 🎯 Objective
-
-Track weekly KPIs for clinical trials such as:
-
-- Number of tests performed  
-- Mutation positive rate (%)  
-- TAT (Turnaround Time)  
-- Volume by location / lab / test type  
-- Drug match recommendations
+**Client**: Pfizer, AstraZeneca, Novartis (via NeoGenomics)  
+**Tool**: Tableau + Snowflake backend  
+**Purpose**: Track test volumes, TAT, positive rates, and drug-match efficiency
 
 ---
 
-## 📊 Dashboard Sections
+## 🧩 Dashboard Snapshots
 
-- 📍 **Map View**: Test counts by lab location  
-- ⏱ **Bar Chart**: Average turnaround time  
-- 📈 **Line Graph**: Weekly volume trend  
-- 🔍 **Filter Panel**: By drug type, gene, client
+### 📍 Tests by Location (Map)
 
----
-
-## 🔄 Data Pipeline
-
-Data updated every Monday via SSIS → SQL Server → Tableau Extract Refresh (TDE)
+![Map](../assets/tableau-map-tests.png)
 
 ---
 
-## ✅ Result
+### 📊 Weekly Volume Trend
 
-- Empowered pharma companies to prioritize clinical trials  
-- Helped reduce test delays by 30%  
-- Used in FDA submissions and research papers
+![Line Chart](../assets/tableau-weekly-volume.png)
+
+---
+
+### ⏱️ Turnaround Time (TAT) by Lab
+
+![Bar Chart](../assets/tableau-tat-bar.png)
+
+---
+
+## 🔄 Data Flow
+
+- Raw test data pulled via **SSIS** from SQL Server  
+- Snowflake staging for data modeling  
+- Tableau connects to Snowflake live extract  
+- Auto-refresh every Monday via task scheduler
+
+---
+
+## ✅ Business Value
+
+- Enabled Pharma clients to **track real-time lab performance**  
+- Improved compliance & response to FDA audits  
+- Prioritized drug pipeline based on **mutation-positive rates**
+
+---
