@@ -1,0 +1,20 @@
+vasanth-data-solutions/
+├── README.md
+├── projects/
+│   ├── neogenomics/
+│   │   ├── overview.md
+│   │   ├── sample-report.csv
+│   │   └── screenshot.png
+│   └── honeywell-labour/
+│       ├── process-flow.md
+│       └── azure-pipeline-diagram.png
+├── case-studies/
+│   ├── sql-optimization.md
+│   └── snowflake-etl.md
+├── reports/
+│   ├── sample-ssrs-drill.md
+│   └── pharma-tableau-kpi.md
+├── etl/
+│   └── ssis-xml-cleanup.md
+└── assets/
+    └── logos, icons, thumbnails
