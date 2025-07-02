@@ -1,6 +1,3 @@
-
----
-
 ## 📊 `reports/sample-ssrs-drill.md`
 
 ```markdown
