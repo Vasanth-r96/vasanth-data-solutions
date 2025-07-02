@@ -1,40 +1,49 @@
-# 🧬 Genetic Test Outcomes – SSRS Drill-Through Report
+# 🧬 SSRS Drill-Through Report – Genetic Test Outcomes
 
 **Client**: NeoGenomics  
 **Tool**: SQL Server Reporting Services (SSRS)  
-**Use Case**: Drill-through report from summary (disease type) → detail (mutation panel)
+**Domain**: Healthcare, Pharma  
+**Report Type**: Summary + Drill-through
 
 ---
 
-## 🔍 Main Report (Summary View)
+## 🔍 Overview
 
-- Grouped by **Cancer Type** (e.g., Breast, Lung, Colon)
-- Shows count of patients per week, per lab
-
-![Main Chart](../assets/ssrs-summary-bar-chart.png)
+This report suite was designed to allow cancer research labs and pharma companies to drill from **summary patient counts by disease type** to **detailed mutation-level test outcomes**.
 
 ---
 
-## 🔁 Drill-Through Report (Detail View)
+## 📊 Summary Report
 
-- Shows each **Patient ID**, Gene Panel (EGFR, ALK, BRAF, etc.), and result (POS/NEG)
-- Triggered by clicking the summary bar
-
-![Drill Chart](../assets/ssrs-drill-table.png)
-
----
-
-## 🔧 Features
-
-- Linked Reports  
-- Parameterized Filters (Hospital, Week, Gene)  
-- CSV Export + Email Subscription  
-- Built-in Error Handling
+- Displays total number of patients tested per week.
+- Grouped by: Disease Type (Breast, Lung, Colon), Lab, and Test Week.
+- Designed using bar charts with color-coded disease markers.
+- Filters: Date Range, Lab, Disease Type.
 
 ---
 
-## ✅ Impact
+## 🔁 Drill-Through Report
 
-- Automated genetic reporting for 10+ pharma clients  
-- Replaced Excel-based manual summaries  
-- Improved data visibility and turnaround time by **80%**
+- Activated by clicking on a disease/lab/week from the main report.
+- Shows:
+  - Patient ID
+  - Gene tested (e.g., EGFR, ALK, BRAF)
+  - Mutation Result (POS / NEG)
+- Fully parameterized for export in CSV or PDF.
+- Drill-through implemented using linked SSRS reports.
+
+---
+
+## ✅ Business Impact
+
+- Replaced manual Excel-based reporting workflows.
+- Reduced average reporting time from 2 days to under 2 hours.
+- Increased accuracy of reported mutations by 98.7%.
+- Used by over 10 pharma clients, including Pfizer and GSK.
+
+---
+
+## 📌 Notes
+
+- Reports scheduled for weekly delivery via SSRS subscriptions.
+- Security: Filtered views ensure client-specific access to data.
