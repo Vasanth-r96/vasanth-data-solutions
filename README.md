@@ -74,7 +74,7 @@ I transform raw, complex datasets into scalable, production-grade data pipelines
 
 ## 📫 Contact
 
-📧 Email: [vasa77vijay@gmail.com](mailto:vasa77vijay@gmail.com)  
+📧 Email: [vasanthramalingam96@gmail.com](mailto:vasanthramalingam96@gmail.com)  
 🌐 LinkedIn: https://www.linkedin.com/in/vasanth-ramalingam-549053304/  
 📍 Available for freelance, contract & remote gigs (Part-Time / Full-Time)
 
