@@ -1,5 +1,3 @@
-# vasanth-data-solutions
-
 # 👨‍💻 Vasanth R – Data Engineering Specialist | SQL & Snowflake Expert
 
 🔹 7+ Years of Experience | 🔹 Healthcare, Pharma, Insurance | 🔹 Performance-Focused Data Solutions
