@@ -1,44 +1,57 @@
-# 📈 Tableau KPI Dashboard – Cancer Diagnostics & Drug Trials
+# 📈 Tableau KPI Dashboard – Cancer Clinical Trials
 
-**Client**: Pfizer, AstraZeneca, Novartis (via NeoGenomics)  
-**Tool**: Tableau + Snowflake backend  
-**Purpose**: Track test volumes, TAT, positive rates, and drug-match efficiency
-
----
-
-## 🧩 Dashboard Snapshots
-
-### 📍 Tests by Location (Map)
-
-![Map](../assets/tableau-map-tests.png)
+**Client**: NeoGenomics + Partner Pharma Clients  
+**Tool**: Tableau (connected to Snowflake and SQL Server)  
+**Domain**: Oncology, Diagnostics  
+**Purpose**: Performance & Outcome Monitoring
 
 ---
 
-### 📊 Weekly Volume Trend
+## 📊 Dashboard Overview
 
-![Line Chart](../assets/tableau-weekly-volume.png)
-
----
-
-### ⏱️ Turnaround Time (TAT) by Lab
-
-![Bar Chart](../assets/tableau-tat-bar.png)
+The dashboard was created to monitor and optimize performance KPIs for cancer testing labs and trial sites. Data is refreshed weekly from ETL pipelines processed via Snowflake and SSIS.
 
 ---
 
-## 🔄 Data Flow
+## 🧩 KPI Components
 
-- Raw test data pulled via **SSIS** from SQL Server  
-- Snowflake staging for data modeling  
-- Tableau connects to Snowflake live extract  
-- Auto-refresh every Monday via task scheduler
+### 1. Test Volume by Location (Map View)
+- Displays testing centers across the US.
+- Bubble size = Volume of tests conducted in that location.
+- Drillable by test type or disease.
+
+### 2. Weekly Volume Trend (Line Graph)
+- X-axis: Test Weeks
+- Y-axis: Number of Samples Processed
+- Shows spike or drop in test processing over time.
+
+### 3. Turnaround Time by Lab (Bar Chart)
+- TAT measured in hours.
+- Compares labs: Lab A, Lab B, Lab C.
+- Highlighted bars for outliers or underperforming labs.
 
 ---
 
-## ✅ Business Value
+## 🔄 Data Pipeline
 
-- Enabled Pharma clients to **track real-time lab performance**  
-- Improved compliance & response to FDA audits  
-- Prioritized drug pipeline based on **mutation-positive rates**
+- Source: Raw test data from SQL Server
+- ETL: Processed via SSIS into Snowflake staging
+- Transformation: Snowflake Views & Materialized Tables
+- Visualization: Tableau Public dashboards with embedded filters
 
 ---
+
+## ✅ Client Benefits
+
+- Enabled real-time monitoring of lab efficiency
+- Facilitated faster decision-making in clinical trials
+- Reduced turnaround time variance by 32%
+- Improved trial drug targeting by mutation positivity analysis
+
+---
+
+## 📌 Notes
+
+- Refreshed every Monday 6 AM EST via Tableau scheduler
+- Used in FDA submission documentation and R&D reviews
+- View-level row-level security implemented for client segmentation
